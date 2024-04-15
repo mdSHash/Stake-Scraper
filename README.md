@@ -10,5 +10,5 @@ This project consists of two Python scripts to scrape data from the Stake websit
 
 ## Installation
 1. Clone the repository:
-  git clone <(https://github.com/mdSHash/Stake-Scraper)>
+  git clone https://github.com/mdSHash/Stake-Scraper
   cd Stake-Scraper
