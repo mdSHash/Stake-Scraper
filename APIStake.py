@@ -8,7 +8,7 @@ app = Flask(__name__)
 def get_data():
     data = []
     # Read data from CSV file
-    with open('response_data.csv', newline='', encoding='utf-8') as csv_file:
+    with open('Tennis_Bets.csv', newline='', encoding='utf-8') as csv_file:
         reader = csv.DictReader(csv_file)
         data = list(reader)  # Convert reader to list of dictionaries
     return jsonify(data)
