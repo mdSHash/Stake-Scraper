@@ -24,7 +24,7 @@ This project consists of two Python scripts to scrape data from the Stake websit
   python app.py
 
 3. Access the API endpoint to get the scraped data:
-  http://localhost:5000/api/data
+  http://localhost:8000/api/data
 
 ## Notes
 - Ensure that you have proper internet connectivity to scrape data from the Stake website.
