@@ -2,7 +2,7 @@
 Scraping the High Rollers Tennis bets
 
 ## Overview
-This project consists of two Python scripts to scrape data from the Stake website using GraphQL API and Flask to serve the scraped data via a RESTful API. The first script (`Stake_Scraper.py`) continuously fetches betting data, converts currency, and stores it in a CSV file. The second script (`APIStake.py`) creates a Flask web server to serve the scraped data.
+This project consists of two Python scripts to scrape data from the Stake website using GraphQL API and Flask to serve the scraped data via a RESTful API. The first script (`Stake_Scraper.py`) continuously fetches betting data, converts currency, and stores it in a CSV file. The second script (`APIStake.py`) creates a Fast-API web server to serve the scraped data.
 
 ## Requirements
 - Python 3.x
