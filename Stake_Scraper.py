@@ -41,8 +41,11 @@ def scrape_final_converted_value(amount, from_currency):
 url = "https://stake.com/_api/graphql"
 
 # Define the updated cookies and headers
+import requests
+
 cookies = {
-    # your cookies here
+    'cf_chl_3': '2efe7c380b0870b',
+    '__cf_bm': 'qkKDhBagiLnEsX5MUGGlDsZYx2z8rADqrsZT2gXU0lc-1713409918-1.0.1.1-C6.VnOlgC6NLmL5XKbYuEA_7B5Lr98B.KhgvU.YfEFsCq5f_EAg5WpZXaiaYwRKHAzj6Gs5U4KHgB04ZSqjpKg',
     'currency_currency': 'btc',
     'currency_hideZeroBalances': 'false',
     'currency_currencyView': 'crypto',
@@ -53,35 +56,33 @@ cookies = {
     'sportsSearch': '["Liverpool FC","Kansas City Chiefs","Los Angeles Lakers","FC Barcelona","FC Bayern Munich"]',
     'sportMarketGroupMap': '{}',
     'oddsFormat': 'decimal',
-    '_ga': 'GA1.1.721079648.1713287683',
-    'intercom-id-cx1ywgf2': '247b93ce-60c8-463c-919c-448838bd9f47',
-    'intercom-device-id-cx1ywgf2': '15ae0a9b-e6c5-404a-8e2b-e96a8a9de91d',
     'locale': 'en',
+    'cf_clearance': 'Ng8iHMWbxamUhzlNAhhSJdWhh3FAHiyF4.oetAxslBI-1713409919-1.0.1.1-kOuR8as26SxjiTDw8145yllP7qB3eZyJ51hBRsh.peV5CTzDcLC8l7jPUDhj_Dxehj8UMJ7drf3sEwwunbzE8Q',
+    '_ga': 'GA1.1.555245548.1713409917',
+    'intercom-id-cx1ywgf2': '015046ce-b8cd-4001-b8f6-6f4625d05ea8',
+    'intercom-device-id-cx1ywgf2': 'cc4e2d4a-adb7-4fca-9b7c-35a6f8ecfc0e',
     'cookie_consent': 'true',
-    'cf_clearance': 'C5XDXOYlmPrB17PfJjk2Q9h9pKX37UZ3ZPbpFeAFuBc-1713289909-1.0.1.1-Bf6xl.9jrsBtlhAlzbCq0T.ksgupXbAhm818KrwQWvIZjnMOOyuN1Ox2xC50gyqusRtsuS9ifdmdeHfXDSe6vw',
-    'session': '3036dfb6ba67cc2370b0ff1c2d7525fa477c717f018eeeead189273533a03db1791a2fd2b1b2da2d90859b377ab1e56f',
-    'session_info': '{"id":"19cb76dc-5e8c-475e-b815-5c580d8c6018","sessionName":"Chrome (Unknown)","ip":"197.49.61.89","country":"EG","city":"Giza","active":true,"updatedAt":"Tue, 16 Apr 2024 20:21:14 GMT","__typename":"UserSession"}',
-    '__cf_bm': 'Huz7DuI3P0Qi.DS.OM.I_URUO4x_lDmNSxeHhngQTvw-1713304608-1.0.1.1-B.QhpC0LwITWX5SyyHQ16DOdxi3bhTtgstC_yqqFKVv352.Nc6zRNNE14N5VQV3mBUd_IdI0BFtEBYeH8gvMuw',
-    'mp_e29e8d653fb046aa5a7d7b151ecf6f99_mixpanel': '%7B%22distinct_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%2C%22%24device_id%22%3A%20%2218ee7e759a5a56-0db92fb23de6bf-26001a51-1aeaa0-18ee7e759a5a56%22%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22%24user_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%7D',
-    '_ga_TWGX3QNXGG': 'GS1.1.1713304979.5.1.1713304981.0.0.0',
-    '_dd_s': 'rum=0&expire=1713305881827',
-    'intercom-session-cx1ywgf2': 'TEpNS0pKS2s2S3g3a3Z4SWFiRW5xQ004WXlJVHp5WDUrTFlNeTc5d1VhMWVGMDMyZURscEEycUhBd21IMWJSay0tMjVBRjU5c1Z6WktKbUJjNFpjVUovUT09--3c8458670d0701514de7400daad1d31f4352b5b5',
+    'session': '9014bcfd5c7c63790f41033cf42e83fcffe3e2aafbe5d0c24eb7a27f49be13caaf00b8cb19cb1d419aec3d10558d7cde',
+    'session_info': '{"id":"fd585d4e-acba-4656-8c48-31678b85cb28","sessionName":"Chrome (Unknown)","ip":"41.45.4.79","country":"EG","city":"Giza","active":true,"updatedAt":"Thu, 18 Apr 2024 03:17:15 GMT","__typename":"UserSession"}',
+    'mp_e29e8d653fb046aa5a7d7b151ecf6f99_mixpanel': '%7B%22distinct_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%2C%22%24device_id%22%3A%20%2218eef30809d9f6-020b0ac0918968-26001a51-1aeaa0-18eef30809d9f6%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fstake.com%2Fsports%2Fhome%2Flive%2Ftennis%3F__cf_chl_tk%3DfMnNRCPy3YK_pzB04l_182UTfghO9BvrknBt6nIlNnU-1713409913-0.0.1.1-1621%22%2C%22%24initial_referring_domain%22%3A%20%22stake.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22%24user_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%7D',
+    '_ga_TWGX3QNXGG': 'GS1.1.1713409917.1.1.1713410255.0.0.0',
+    '_dd_s': 'rum=0&expire=1713411156854',
+    'intercom-session-cx1ywgf2': 'bkFwaFNFZnFsMkt6SWxMM3ZnZko2WDhSMkhkRFZzSlM3b0pNTnRWT2xvMlgyMTZTSXpmL2ZIakhKUzVObEdoeC0tWUs3UHc1aXZCZFQxWFlONjEzZjlUQT09--fca582eb2bbb492b1f27f263d34d8e7e145610ac',
 }
 
 headers = {
-    # your headers here
     'accept': '*/*',
     'accept-language': 'en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7,ar-EG;q=0.6,ar;q=0.5',
     'access-control-allow-origin': '*',
     'content-type': 'application/json',
-    # 'cookie': 'currency_currency=btc; currency_hideZeroBalances=false; currency_currencyView=crypto; fiat_number_format=en; leftSidebarView_v2=expanded; sidebarView=hidden; casinoSearch=["Monopoly","Crazy Time","Sweet Bonanza","Money Train","Reactoonz"]; sportsSearch=["Liverpool FC","Kansas City Chiefs","Los Angeles Lakers","FC Barcelona","FC Bayern Munich"]; sportMarketGroupMap={}; oddsFormat=decimal; _ga=GA1.1.721079648.1713287683; intercom-id-cx1ywgf2=247b93ce-60c8-463c-919c-448838bd9f47; intercom-device-id-cx1ywgf2=15ae0a9b-e6c5-404a-8e2b-e96a8a9de91d; locale=en; cookie_consent=true; cf_clearance=C5XDXOYlmPrB17PfJjk2Q9h9pKX37UZ3ZPbpFeAFuBc-1713289909-1.0.1.1-Bf6xl.9jrsBtlhAlzbCq0T.ksgupXbAhm818KrwQWvIZjnMOOyuN1Ox2xC50gyqusRtsuS9ifdmdeHfXDSe6vw; session=3036dfb6ba67cc2370b0ff1c2d7525fa477c717f018eeeead189273533a03db1791a2fd2b1b2da2d90859b377ab1e56f; session_info={"id":"19cb76dc-5e8c-475e-b815-5c580d8c6018","sessionName":"Chrome (Unknown)","ip":"197.49.61.89","country":"EG","city":"Giza","active":true,"updatedAt":"Tue, 16 Apr 2024 20:21:14 GMT","__typename":"UserSession"}; __cf_bm=Huz7DuI3P0Qi.DS.OM.I_URUO4x_lDmNSxeHhngQTvw-1713304608-1.0.1.1-B.QhpC0LwITWX5SyyHQ16DOdxi3bhTtgstC_yqqFKVv352.Nc6zRNNE14N5VQV3mBUd_IdI0BFtEBYeH8gvMuw; mp_e29e8d653fb046aa5a7d7b151ecf6f99_mixpanel=%7B%22distinct_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%2C%22%24device_id%22%3A%20%2218ee7e759a5a56-0db92fb23de6bf-26001a51-1aeaa0-18ee7e759a5a56%22%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22%24user_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%7D; _ga_TWGX3QNXGG=GS1.1.1713304979.5.1.1713304981.0.0.0; _dd_s=rum=0&expire=1713305881827; intercom-session-cx1ywgf2=TEpNS0pKS2s2S3g3a3Z4SWFiRW5xQ004WXlJVHp5WDUrTFlNeTc5d1VhMWVGMDMyZURscEEycUhBd21IMWJSay0tMjVBRjU5c1Z6WktKbUJjNFpjVUovUT09--3c8458670d0701514de7400daad1d31f4352b5b5',
+    # 'cookie': 'cf_chl_3=2efe7c380b0870b; __cf_bm=qkKDhBagiLnEsX5MUGGlDsZYx2z8rADqrsZT2gXU0lc-1713409918-1.0.1.1-C6.VnOlgC6NLmL5XKbYuEA_7B5Lr98B.KhgvU.YfEFsCq5f_EAg5WpZXaiaYwRKHAzj6Gs5U4KHgB04ZSqjpKg; currency_currency=btc; currency_hideZeroBalances=false; currency_currencyView=crypto; fiat_number_format=en; leftSidebarView_v2=expanded; sidebarView=hidden; casinoSearch=["Monopoly","Crazy Time","Sweet Bonanza","Money Train","Reactoonz"]; sportsSearch=["Liverpool FC","Kansas City Chiefs","Los Angeles Lakers","FC Barcelona","FC Bayern Munich"]; sportMarketGroupMap={}; oddsFormat=decimal; locale=en; cf_clearance=Ng8iHMWbxamUhzlNAhhSJdWhh3FAHiyF4.oetAxslBI-1713409919-1.0.1.1-kOuR8as26SxjiTDw8145yllP7qB3eZyJ51hBRsh.peV5CTzDcLC8l7jPUDhj_Dxehj8UMJ7drf3sEwwunbzE8Q; _ga=GA1.1.555245548.1713409917; intercom-id-cx1ywgf2=015046ce-b8cd-4001-b8f6-6f4625d05ea8; intercom-device-id-cx1ywgf2=cc4e2d4a-adb7-4fca-9b7c-35a6f8ecfc0e; cookie_consent=true; session=9014bcfd5c7c63790f41033cf42e83fcffe3e2aafbe5d0c24eb7a27f49be13caaf00b8cb19cb1d419aec3d10558d7cde; session_info={"id":"fd585d4e-acba-4656-8c48-31678b85cb28","sessionName":"Chrome (Unknown)","ip":"41.45.4.79","country":"EG","city":"Giza","active":true,"updatedAt":"Thu, 18 Apr 2024 03:17:15 GMT","__typename":"UserSession"}; mp_e29e8d653fb046aa5a7d7b151ecf6f99_mixpanel=%7B%22distinct_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%2C%22%24device_id%22%3A%20%2218eef30809d9f6-020b0ac0918968-26001a51-1aeaa0-18eef30809d9f6%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fstake.com%2Fsports%2Fhome%2Flive%2Ftennis%3F__cf_chl_tk%3DfMnNRCPy3YK_pzB04l_182UTfghO9BvrknBt6nIlNnU-1713409913-0.0.1.1-1621%22%2C%22%24initial_referring_domain%22%3A%20%22stake.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22%24user_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%7D; _ga_TWGX3QNXGG=GS1.1.1713409917.1.1.1713410255.0.0.0; _dd_s=rum=0&expire=1713411156854; intercom-session-cx1ywgf2=bkFwaFNFZnFsMkt6SWxMM3ZnZko2WDhSMkhkRFZzSlM3b0pNTnRWT2xvMlgyMTZTSXpmL2ZIakhKUzVObEdoeC0tWUs3UHc1aXZCZFQxWFlONjEzZjlUQT09--fca582eb2bbb492b1f27f263d34d8e7e145610ac',
     'origin': 'https://stake.com',
-    'referer': 'https://stake.com/sports/home',
+    'referer': 'https://stake.com/sports/home/live/tennis',
     'sec-ch-ua': '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
     'sec-ch-ua-arch': '"x86"',
     'sec-ch-ua-bitness': '"64"',
-    'sec-ch-ua-full-version': '"123.0.6312.123"',
-    'sec-ch-ua-full-version-list': '"Google Chrome";v="123.0.6312.123", "Not:A-Brand";v="8.0.0.0", "Chromium";v="123.0.6312.123"',
+    'sec-ch-ua-full-version': '"123.0.6312.124"',
+    'sec-ch-ua-full-version-list': '"Google Chrome";v="123.0.6312.124", "Not:A-Brand";v="8.0.0.0", "Chromium";v="123.0.6312.124"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-model': '""',
     'sec-ch-ua-platform': '"Windows"',
@@ -90,7 +91,7 @@ headers = {
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
-    'x-access-token': '3036dfb6ba67cc2370b0ff1c2d7525fa477c717f018eeeead189273533a03db1791a2fd2b1b2da2d90859b377ab1e56f',
+    'x-access-token': '9014bcfd5c7c63790f41033cf42e83fcffe3e2aafbe5d0c24eb7a27f49be13caaf00b8cb19cb1d419aec3d10558d7cde',
     'x-language': 'en',
 }
 
