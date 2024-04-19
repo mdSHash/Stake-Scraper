@@ -41,14 +41,14 @@ def scrape_final_converted_value(amount, from_currency):
 url = "https://stake.com/_api/graphql"
 
 # Define the updated cookies and headers
-import requests
 
 cookies = {
-    'cf_chl_3': '2efe7c380b0870b',
-    '__cf_bm': 'qkKDhBagiLnEsX5MUGGlDsZYx2z8rADqrsZT2gXU0lc-1713409918-1.0.1.1-C6.VnOlgC6NLmL5XKbYuEA_7B5Lr98B.KhgvU.YfEFsCq5f_EAg5WpZXaiaYwRKHAzj6Gs5U4KHgB04ZSqjpKg',
+    'cf_chl_3': '7c7d266e66720bf',
+    '__cf_bm': 'vrp9e5sIoBFt64hsgrwq1u0UScyRPx6miinglm9b13c-1713488413-1.0.1.1-PWbVJjdeJbUtJLcLqZqvEQ2g5IstD_iSGfbCAInEffnqFKKQ09JbUV.eI_oXxefB3PStHWzPsEj9gXfIRB.DPw',
     'currency_currency': 'btc',
     'currency_hideZeroBalances': 'false',
     'currency_currencyView': 'crypto',
+    'session_info': 'undefined',
     'fiat_number_format': 'en',
     'leftSidebarView_v2': 'expanded',
     'sidebarView': 'hidden',
@@ -56,18 +56,16 @@ cookies = {
     'sportsSearch': '["Liverpool FC","Kansas City Chiefs","Los Angeles Lakers","FC Barcelona","FC Bayern Munich"]',
     'sportMarketGroupMap': '{}',
     'oddsFormat': 'decimal',
+    'cf_clearance': 'T9HUNNEmWJd2cDvqk5tbwGtJksVq0mvlPwy_l6lnWWo-1713488415-1.0.1.1-GzojYnzOX5U9F6Ga4pe6jztxJjYZacty2IKgOLLE.BfSCqJbYKEgPKKH5Ht55lnxBumcQwnA2ZbNXr89CbaJ6g',
     'locale': 'en',
-    'cf_clearance': 'Ng8iHMWbxamUhzlNAhhSJdWhh3FAHiyF4.oetAxslBI-1713409919-1.0.1.1-kOuR8as26SxjiTDw8145yllP7qB3eZyJ51hBRsh.peV5CTzDcLC8l7jPUDhj_Dxehj8UMJ7drf3sEwwunbzE8Q',
-    '_ga': 'GA1.1.555245548.1713409917',
-    'intercom-id-cx1ywgf2': '015046ce-b8cd-4001-b8f6-6f4625d05ea8',
-    'intercom-device-id-cx1ywgf2': 'cc4e2d4a-adb7-4fca-9b7c-35a6f8ecfc0e',
+    'mp_e29e8d653fb046aa5a7d7b151ecf6f99_mixpanel': '%7B%22distinct_id%22%3A%20%22%24device%3A18ef3de3ab68d4-06348d5e2c94d5-26001a51-1aeaa0-18ef3de3ab68d4%22%2C%22%24device_id%22%3A%20%2218ef3de3ab68d4-06348d5e2c94d5-26001a51-1aeaa0-18ef3de3ab68d4%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fstake.com%2Fsports%2Fhome%3F__cf_chl_tk%3DmeYKA8xYiwZ4pxA2WGrIGAU6RKjKwYF35MpBskjM56s-1713488410-0.0.1.1-1578%22%2C%22%24initial_referring_domain%22%3A%20%22stake.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fstake.com%2Fsports%2Fhome%3F__cf_chl_tk%3DmeYKA8xYiwZ4pxA2WGrIGAU6RKjKwYF35MpBskjM56s-1713488410-0.0.1.1-1578%22%2C%22%24initial_referring_domain%22%3A%20%22stake.com%22%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%7D',
+    '_ga': 'GA1.1.666642434.1713488411',
+    '_ga_TWGX3QNXGG': 'GS1.1.1713488411.1.0.1713488411.0.0.0',
+    'intercom-id-cx1ywgf2': '92e9305e-cb92-4886-b9a5-1c17f8c044fc',
+    'intercom-session-cx1ywgf2': '',
+    'intercom-device-id-cx1ywgf2': '94df984a-52ff-450f-85b0-491f4fb74b14',
     'cookie_consent': 'true',
-    'session': '9014bcfd5c7c63790f41033cf42e83fcffe3e2aafbe5d0c24eb7a27f49be13caaf00b8cb19cb1d419aec3d10558d7cde',
-    'session_info': '{"id":"fd585d4e-acba-4656-8c48-31678b85cb28","sessionName":"Chrome (Unknown)","ip":"41.45.4.79","country":"EG","city":"Giza","active":true,"updatedAt":"Thu, 18 Apr 2024 03:17:15 GMT","__typename":"UserSession"}',
-    'mp_e29e8d653fb046aa5a7d7b151ecf6f99_mixpanel': '%7B%22distinct_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%2C%22%24device_id%22%3A%20%2218eef30809d9f6-020b0ac0918968-26001a51-1aeaa0-18eef30809d9f6%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fstake.com%2Fsports%2Fhome%2Flive%2Ftennis%3F__cf_chl_tk%3DfMnNRCPy3YK_pzB04l_182UTfghO9BvrknBt6nIlNnU-1713409913-0.0.1.1-1621%22%2C%22%24initial_referring_domain%22%3A%20%22stake.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22%24user_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%7D',
-    '_ga_TWGX3QNXGG': 'GS1.1.1713409917.1.1.1713410255.0.0.0',
-    '_dd_s': 'rum=0&expire=1713411156854',
-    'intercom-session-cx1ywgf2': 'bkFwaFNFZnFsMkt6SWxMM3ZnZko2WDhSMkhkRFZzSlM3b0pNTnRWT2xvMlgyMTZTSXpmL2ZIakhKUzVObEdoeC0tWUs3UHc1aXZCZFQxWFlONjEzZjlUQT09--fca582eb2bbb492b1f27f263d34d8e7e145610ac',
+    '_dd_s': '',
 }
 
 headers = {
@@ -75,9 +73,9 @@ headers = {
     'accept-language': 'en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7,ar-EG;q=0.6,ar;q=0.5',
     'access-control-allow-origin': '*',
     'content-type': 'application/json',
-    # 'cookie': 'cf_chl_3=2efe7c380b0870b; __cf_bm=qkKDhBagiLnEsX5MUGGlDsZYx2z8rADqrsZT2gXU0lc-1713409918-1.0.1.1-C6.VnOlgC6NLmL5XKbYuEA_7B5Lr98B.KhgvU.YfEFsCq5f_EAg5WpZXaiaYwRKHAzj6Gs5U4KHgB04ZSqjpKg; currency_currency=btc; currency_hideZeroBalances=false; currency_currencyView=crypto; fiat_number_format=en; leftSidebarView_v2=expanded; sidebarView=hidden; casinoSearch=["Monopoly","Crazy Time","Sweet Bonanza","Money Train","Reactoonz"]; sportsSearch=["Liverpool FC","Kansas City Chiefs","Los Angeles Lakers","FC Barcelona","FC Bayern Munich"]; sportMarketGroupMap={}; oddsFormat=decimal; locale=en; cf_clearance=Ng8iHMWbxamUhzlNAhhSJdWhh3FAHiyF4.oetAxslBI-1713409919-1.0.1.1-kOuR8as26SxjiTDw8145yllP7qB3eZyJ51hBRsh.peV5CTzDcLC8l7jPUDhj_Dxehj8UMJ7drf3sEwwunbzE8Q; _ga=GA1.1.555245548.1713409917; intercom-id-cx1ywgf2=015046ce-b8cd-4001-b8f6-6f4625d05ea8; intercom-device-id-cx1ywgf2=cc4e2d4a-adb7-4fca-9b7c-35a6f8ecfc0e; cookie_consent=true; session=9014bcfd5c7c63790f41033cf42e83fcffe3e2aafbe5d0c24eb7a27f49be13caaf00b8cb19cb1d419aec3d10558d7cde; session_info={"id":"fd585d4e-acba-4656-8c48-31678b85cb28","sessionName":"Chrome (Unknown)","ip":"41.45.4.79","country":"EG","city":"Giza","active":true,"updatedAt":"Thu, 18 Apr 2024 03:17:15 GMT","__typename":"UserSession"}; mp_e29e8d653fb046aa5a7d7b151ecf6f99_mixpanel=%7B%22distinct_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%2C%22%24device_id%22%3A%20%2218eef30809d9f6-020b0ac0918968-26001a51-1aeaa0-18eef30809d9f6%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fstake.com%2Fsports%2Fhome%2Flive%2Ftennis%3F__cf_chl_tk%3DfMnNRCPy3YK_pzB04l_182UTfghO9BvrknBt6nIlNnU-1713409913-0.0.1.1-1621%22%2C%22%24initial_referring_domain%22%3A%20%22stake.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22%24user_id%22%3A%20%2239ccf22052999ee21fccddd535ecaa663abf51f1f45ec8e9196c41f556785a07%22%7D; _ga_TWGX3QNXGG=GS1.1.1713409917.1.1.1713410255.0.0.0; _dd_s=rum=0&expire=1713411156854; intercom-session-cx1ywgf2=bkFwaFNFZnFsMkt6SWxMM3ZnZko2WDhSMkhkRFZzSlM3b0pNTnRWT2xvMlgyMTZTSXpmL2ZIakhKUzVObEdoeC0tWUs3UHc1aXZCZFQxWFlONjEzZjlUQT09--fca582eb2bbb492b1f27f263d34d8e7e145610ac',
+    # 'cookie': 'cf_chl_3=7c7d266e66720bf; __cf_bm=vrp9e5sIoBFt64hsgrwq1u0UScyRPx6miinglm9b13c-1713488413-1.0.1.1-PWbVJjdeJbUtJLcLqZqvEQ2g5IstD_iSGfbCAInEffnqFKKQ09JbUV.eI_oXxefB3PStHWzPsEj9gXfIRB.DPw; currency_currency=btc; currency_hideZeroBalances=false; currency_currencyView=crypto; session_info=undefined; fiat_number_format=en; leftSidebarView_v2=expanded; sidebarView=hidden; casinoSearch=["Monopoly","Crazy Time","Sweet Bonanza","Money Train","Reactoonz"]; sportsSearch=["Liverpool FC","Kansas City Chiefs","Los Angeles Lakers","FC Barcelona","FC Bayern Munich"]; sportMarketGroupMap={}; oddsFormat=decimal; cf_clearance=T9HUNNEmWJd2cDvqk5tbwGtJksVq0mvlPwy_l6lnWWo-1713488415-1.0.1.1-GzojYnzOX5U9F6Ga4pe6jztxJjYZacty2IKgOLLE.BfSCqJbYKEgPKKH5Ht55lnxBumcQwnA2ZbNXr89CbaJ6g; locale=en; mp_e29e8d653fb046aa5a7d7b151ecf6f99_mixpanel=%7B%22distinct_id%22%3A%20%22%24device%3A18ef3de3ab68d4-06348d5e2c94d5-26001a51-1aeaa0-18ef3de3ab68d4%22%2C%22%24device_id%22%3A%20%2218ef3de3ab68d4-06348d5e2c94d5-26001a51-1aeaa0-18ef3de3ab68d4%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fstake.com%2Fsports%2Fhome%3F__cf_chl_tk%3DmeYKA8xYiwZ4pxA2WGrIGAU6RKjKwYF35MpBskjM56s-1713488410-0.0.1.1-1578%22%2C%22%24initial_referring_domain%22%3A%20%22stake.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fstake.com%2Fsports%2Fhome%3F__cf_chl_tk%3DmeYKA8xYiwZ4pxA2WGrIGAU6RKjKwYF35MpBskjM56s-1713488410-0.0.1.1-1578%22%2C%22%24initial_referring_domain%22%3A%20%22stake.com%22%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%7D; _ga=GA1.1.666642434.1713488411; _ga_TWGX3QNXGG=GS1.1.1713488411.1.0.1713488411.0.0.0; intercom-id-cx1ywgf2=92e9305e-cb92-4886-b9a5-1c17f8c044fc; intercom-session-cx1ywgf2=; intercom-device-id-cx1ywgf2=94df984a-52ff-450f-85b0-491f4fb74b14; cookie_consent=true; _dd_s=',
     'origin': 'https://stake.com',
-    'referer': 'https://stake.com/sports/home/live/tennis',
+    'referer': 'https://stake.com/sports/home',
     'sec-ch-ua': '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
     'sec-ch-ua-arch': '"x86"',
     'sec-ch-ua-bitness': '"64"',
@@ -91,7 +89,6 @@ headers = {
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
-    'x-access-token': '9014bcfd5c7c63790f41033cf42e83fcffe3e2aafbe5d0c24eb7a27f49be13caaf00b8cb19cb1d419aec3d10558d7cde',
     'x-language': 'en',
 }
 
